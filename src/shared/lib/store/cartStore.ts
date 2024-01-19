@@ -1,3 +1,5 @@
+"use client";
+
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 import { devtools } from "zustand/middleware";
@@ -15,15 +17,17 @@ export interface IUseCartStore {
 const useCartStore = create<IUseCartStore>()(
     devtools(
         immer((set, get) => ({
-            products: localStorage.getItem("cart")
-                ? JSON.parse(localStorage.getItem("cart") as string)
-                : [],
+            products:
+                typeof window !== "undefined" && localStorage.getItem("cart")
+                    ? JSON.parse(localStorage.getItem("cart") as string)
+                    : [],
             getProductsCount: () => get().products.length,
             isProductInCart: (productTitle: string) =>
                 get().products.filter(({ title }) => title === productTitle).length > 0,
             addProduct: (product: IProduct) => {
                 const allProducts = [...get().products, product];
-                localStorage.setItem("cart", JSON.stringify(allProducts));
+                typeof window !== "undefined" &&
+                    localStorage.setItem("cart", JSON.stringify(allProducts));
 
                 set({
                     products: allProducts
@@ -33,7 +37,8 @@ const useCartStore = create<IUseCartStore>()(
                 const filteredProducts = get().products.filter(
                     ({ title }) => title !== productTitle
                 );
-                localStorage.setItem("cart", JSON.stringify(filteredProducts));
+                typeof window !== "undefined" &&
+                    localStorage.setItem("cart", JSON.stringify(filteredProducts));
 
                 set({
                     products: filteredProducts

@@ -1,15 +1,16 @@
 "use client";
 
-import React, { Suspense, useState } from "react";
+import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 
-import Badge from "./badge";
 import useBlockGlobalStroll from "@/shared/lib/hooks/useBlockGlobalScroll";
 
 import basket from "@/shared/assets/svg/basket.svg";
 import styles from "./Cart.module.scss";
 
-const CartBody = React.lazy(() => import("./cartBody"));
+const Badge = dynamic(() => import("./badge"), { ssr: false });
+const CartBody = dynamic(() => import("./cartBody"), { ssr: false });
 
 const Cart = () => {
     const [cartOpened, setCartOpened] = useState(false);
@@ -25,11 +26,7 @@ const Cart = () => {
                 alt={"basket"}
             />
             <Badge />
-            {cartOpened && (
-                <Suspense>
-                    <CartBody closeCart={() => setCartOpened(false)} />
-                </Suspense>
-            )}
+            {cartOpened && <CartBody closeCart={() => setCartOpened(false)} />}
         </div>
     );
 };

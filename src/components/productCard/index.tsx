@@ -1,25 +1,22 @@
 "use client";
-import React, { FC, Suspense, useState } from "react";
-
+import React, { FC, useState } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
+
 import { IProduct } from "@/shared/constants/products";
 import BuyProduct from "@/components/productCard/buyProduct";
 import { Button, TypesEnum } from "@/shared/ui";
 
 import styles from "./Card.module.scss";
 
-const Modal = React.lazy(() => import("./modal"));
+const Modal = dynamic(() => import("./modal"));
 
 type TCard = IProduct;
 const Card: FC<TCard> = (product) => {
     const { title, src, description } = product || {};
     const [modal, setModal] = useState<JSX.Element | null>(null);
 
-    const ModalComponent = (
-        <Suspense>
-            <Modal product={product} closeModal={() => setModal(null)} />
-        </Suspense>
-    );
+    const ModalComponent = <Modal product={product} closeModal={() => setModal(null)} />;
 
     return (
         <div className={styles.container}>
