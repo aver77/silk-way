@@ -17,11 +17,19 @@ $imageDimensions: 350px;
   flex-direction: row;
   align-items: stretch;
   flex-wrap: nowrap;
+
+  @media screen and (max-width: $ipad) {
+    flex-direction: column;
+  }
 }
 
 .imageWrapper {
   padding: $indentDefaultMd;
   @include flexCenter;
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    flex-direction: column;
+  }
 }
 
 .image {
@@ -30,6 +38,13 @@ $imageDimensions: 350px;
   max-height: $imageDimensions;
   min-height: $imageDimensions;
   border-radius: 50%;
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    max-width: calc($imageDimensions / 1.5);
+    min-width: calc($imageDimensions / 1.5);
+    max-height: calc($imageDimensions / 1.5);
+    min-height: calc($imageDimensions / 1.5);
+  }
 }
 
 .infoSection {
@@ -37,10 +52,18 @@ $imageDimensions: 350px;
   display: flex;
   flex-direction: column;
   gap: $indentDefaultMd;
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    padding: $indentDefaultSm;
+  }
 }
 
 .title {
   @include title;
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    font-size: $fsTextXL;;
+  }
 }
 
 .description {
@@ -49,4 +72,8 @@ $imageDimensions: 350px;
 
 .text {
   font-size: $fsTextL;
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    font-size: $fsTextMd;
+  }
 }
