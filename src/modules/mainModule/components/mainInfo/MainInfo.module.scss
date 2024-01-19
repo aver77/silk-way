@@ -1,0 +1,76 @@
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/vars/fonts";
+@import "src/shared/styles/mixins/components";
+@import "src/shared/styles/vars/colors.module.scss";
+
+.container {
+  position: relative;
+  height: $mainInfoSectionHeight + $headerHeight;
+}
+
+.lanternsImg {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.mask {
+  @include mask;
+}
+
+.infoSection {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: calc(4 * $indentDefaultXl);
+  padding-right: $indentDefaultMd;
+
+  @media screen and (max-width: $ipadLg) {
+    padding-left: calc(2 * $indentDefaultXl);
+  }
+
+  @media screen and (max-width: $ipad) {
+    padding-left: $indentDefaultXl;
+  }
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    padding-left: $indentDefaultMd;
+  }
+}
+
+.aboutInfo {
+  @include title;
+  margin: $indentLow 0 $indentDefaultMd 0 ;
+
+  @media screen and (max-width: $ipadLg) {
+    font-size: $fsTextXL;
+  }
+
+  @media screen and (max-width: $ipad) {
+    font-size: $fsTextL;
+  }
+}
+
+.deliveryInfo {
+  font-size: $fsTextEXL;
+
+  @media screen and (max-width: $ipadLg) {
+    font-size: $fsTextXXXL;
+  }
+
+  @media screen and (max-width: $ipad) {
+    font-size: $fsTextXXL;
+  }
+}

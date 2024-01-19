@@ -1,0 +1,48 @@
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/vars/fonts";
+@import "src/shared/styles/vars/colors.module.scss";
+@import "src/shared/styles/mixins/components";
+
+.container {
+  min-height: 100%;
+  max-height: 100%;
+  min-width: 260px;
+  max-width: 260px;
+}
+
+.image {
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.text {
+  font-size: $fsTextMd;
+}
+
+.name {
+  font-family: "Gang-Of-Three";
+}
+
+.infoSection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.extraInfoSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: $indentDefaultSm 0;
+}
+
+.starsContainer {
+  margin-right: 12px;
+  width: fit-content;
+}
+
+.reviewText {
+  @include ellipsisRowText(3);
+}

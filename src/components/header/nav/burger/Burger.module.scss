@@ -1,0 +1,53 @@
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/vars/fonts";
+@import "src/shared/styles/vars/colors.module.scss";
+@import "src/shared/styles/mixins/components";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: $zIndexBurger;
+  height: $headerHeight + $mainInfoSectionHeight;
+  background: $gray;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: $headerHeight;
+  padding: 0 $indentDefaultMd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  min-width: fit-content;
+  @include title;
+
+  @media screen and (max-width: $ipad) {
+    flex-grow: 1;
+    font-size: $fsTextXL;
+  }
+}
+
+.closeImg {
+  @include closeIcon;
+}
+
+.navigationWrapper {
+  flex-grow: 1;
+  & > nav {
+    display: block;
+    height: 100%;
+    & > ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 100%;
+    }
+  }
+}

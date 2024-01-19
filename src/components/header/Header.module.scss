@@ -1,0 +1,83 @@
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/vars/fonts";
+@import "src/shared/styles/vars/colors.module.scss";
+@import "src/shared/styles/mixins/components";
+
+.container {
+  top: 0;
+  left: 0;
+  height: $headerHeight;
+  padding: 0 calc(2 * $indentDefaultXl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  filter: drop-shadow(0 0 $indentLow $black);
+  transition: 0.3s ease;
+  z-index: $headerZIndex;
+  gap: $indentDefaultMd;
+
+  @media screen and (max-width: $ipadLg) {
+    padding: 0 $indentDefaultXl;
+  }
+
+  @media screen and (max-width: $ipad) {
+    padding: 0 $indentDefaultMd;
+  }
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    padding-left: $indentDefaultSm;
+  }
+}
+
+.stickyContainer {
+  position: sticky;
+  width: 100%;
+}
+
+.fixedContainer {
+  position: fixed;
+  width: -webkit-fill-available;
+}
+
+.headerTransparent {
+  background: transparent;
+}
+
+.headerAlphaBg {
+  background: rgba($gray, 0.4);
+}
+
+.headerFullBg {
+  background: $gray;
+}
+
+.logoContainer {
+  min-width: fit-content;
+  @include title;
+
+  @media screen and (max-width: $ipad) {
+    flex-grow: 1;
+    font-size: $fsTextXL;
+  }
+}
+
+.menuUl {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: $indentDefaultL;
+  font-size: $fsTextXL;
+}
+
+.menuLi {
+  cursor: pointer;
+}
+
+.basketContainer {
+  position: relative;
+}
+
+.basketImg {
+  cursor: pointer;
+  height: 36px;
+  width: 36px;
+}

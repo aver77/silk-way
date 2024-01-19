@@ -1,0 +1,80 @@
+@import "src/shared/styles/mixins/components";
+
+.container {
+  padding: $indentDefaultL calc(4 * $indentDefaultXl);
+
+  @media screen and (max-width: $ipadLg) {
+    padding: $indentDefaultL calc(2 * $indentDefaultXl);
+  }
+
+  @media screen and (max-width: $ipad) {
+    padding: $indentDefaultL $indentDefaultMd;
+  }
+}
+
+.title {
+  @include title;
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    font-size: $fsTextXL;
+  }
+}
+
+.aboutContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: $indentDefaultL;
+  margin: $indentDefaultMd 0;
+
+  @media screen and (max-width: $ipad) {
+    flex-direction: column;
+    gap: $indentDefaultMd;
+  }
+}
+
+.aboutText {
+  font-size: $fsTextL;
+  line-height: calc($fsTextL * 1.5);
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: $indentLow;
+
+  @media screen and (max-width: $ipad) {
+    width: 100%;
+  }
+}
+
+.reviewsContainer {
+  height: 160px;
+  gap: $indentDefaultMd;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.aboutReviews {
+  height: inherit;
+  flex-direction: column;
+  gap: $indentDefaultL;
+  font-size: $fsTextXL;
+  @include flexCenter;
+
+  @media screen and (max-width: $ipad) {
+    flex-direction: unset;
+    flex-wrap: wrap;
+  }
+}
+
+.reviewsTitle {
+  @media screen and (max-width: $ipad) {
+    display: none;
+  }
+}
+
+.image {
+  max-width: 200px;
+  min-width: 200px;
+}

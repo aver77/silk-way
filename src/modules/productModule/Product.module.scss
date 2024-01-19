@@ -1,0 +1,65 @@
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/vars/fonts";
+@import "src/shared/styles/vars/colors.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding: $indentDefaultL calc(4 * $indentDefaultXl);
+
+  @media screen and (max-width: $ipadLg) {
+    padding: $indentDefaultL calc(2 * $indentDefaultXl);
+  }
+
+  @media screen and (max-width: $ipad) {
+    padding: $indentDefaultL $indentDefaultMd;
+  }
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    padding: $indentDefaultMd $indentDefaultSm;
+  }
+}
+
+.input {
+  width: 50%;
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    width: 100%;
+  }
+}
+
+.searchersWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $indentDefaultMd;
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    gap: $indentDefaultSm;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.productsWrapper {
+  margin-top: $indentDefaultXl;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: $indentDefaultL;
+  row-gap: $indentDefaultXl;
+
+  @media screen and (max-width: $ipad) {
+    margin-top: $indentDefaultL;
+    column-gap: $indentDefaultMd;
+    row-gap: $indentDefaultL;
+  }
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    margin-top: $indentDefaultMd;
+  }
+}

@@ -1,0 +1,27 @@
+@import "src/shared/styles/vars/colors.module";
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/mixins/components";
+
+.container {
+    z-index: $modalZIndex;
+    backdrop-filter: blur(26px);
+    height: 100vh;
+    height: 100svh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    padding: $indentDefaultXl;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.closeImg {
+    position: absolute;
+    top: $indentDefaultSm;
+    right: $indentDefaultSm;
+    @include closeIcon;
+}

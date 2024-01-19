@@ -1,0 +1,9 @@
+@import "src/shared/styles/vars/dimensions.module";
+
+.buyContainer {
+  margin-top: $indentDefaultSm;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

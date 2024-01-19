@@ -1,0 +1,35 @@
+//indents
+$indentDefaultXl: 48px;
+$indentDefaultL: 32px;
+$indentDefaultMd: 24px;
+$indentDefaultSm: 12px;
+$indentDefaultXs: 8px;
+$indentLow: 6px;
+
+//breakpoints
+$ipadLg: 1200px;
+$ipad: 900px;
+$ipadSm: 700px;
+$phones: 500px;
+
+//z-indexes
+$modalZIndex: 4;
+$zIndexBurger: 3;
+$zIndexCart: 3;
+$headerZIndex: 2;
+
+//heights
+$headerHeight: 100px;
+$headerHeightMobile: 80px;
+$footerHeight: 60px;
+$footerHeightMobile: 40px;
+$mainInfoSectionHeight: 400px;
+$headerImgSize: 36px;
+
+//radiuses
+$brDefault: 8px;
+
+:export {
+  mainInfoSectionHeight: #{$mainInfoSectionHeight};
+  headerHeight: #{$headerHeight};
+}

@@ -1,0 +1,30 @@
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/vars/fonts";
+
+.nav {
+  display: block;
+  @media screen and (max-width: $ipad) {
+    display: none;
+  }
+}
+
+.menuUl {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: $indentDefaultL;
+  font-size: $fsTextXL;
+}
+
+.menuLi {
+  cursor: pointer;
+}
+
+.burgerImg {
+  display: none;
+  cursor: pointer;
+  height: $headerImgSize;
+  width: $headerImgSize;
+  @media screen and (max-width: $ipad) {
+    display: unset;
+  }
+}

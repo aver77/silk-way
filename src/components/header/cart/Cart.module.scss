@@ -1,0 +1,11 @@
+@import "src/shared/styles/vars/dimensions.module";
+
+.basketContainer {
+  position: relative;
+}
+
+.basketImg {
+  cursor: pointer;
+  height: $headerImgSize;
+  width: $headerImgSize;
+}
