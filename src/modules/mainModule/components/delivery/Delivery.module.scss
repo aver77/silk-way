@@ -16,7 +16,7 @@
   }
 
   @media screen and (max-width: $phones), (max-height: $phones) {
-    padding: $indentDefaultMd $indentDefaultSm;
+    padding: $indentDefaultMd $indentDefaultMd;
   }
 }
 
