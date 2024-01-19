@@ -1,0 +1,13 @@
+$black: #000;
+$gray: #222222;
+$light: #ffffff;
+$red: #F24942;
+$green: #33BC44;
+$lines: rgba(#d7d9dd, 0.2);
+
+:export {
+  black: #{$black};
+  gray: #{$gray};
+  light: #{$light};
+  red: #{$red};
+}

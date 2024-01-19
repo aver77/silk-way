@@ -1,2 +1,37 @@
-@import "src/shared/styles/reset";
-@import "src/shared/styles/vars/colors";
+@import "src/shared/styles/base/reset";
+@import "src/shared/styles/vars/colors.module.scss";
+@import "src/shared/styles/vars/dimensions.module";
+
+
+@font-face {
+  font-family: "Gang-Of-Three";
+  src: url("../shared/styles/vendors/gangofthreerusbydaymarius.ttf");
+}
+
+html, body {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  background-color: $gray;
+}
+
+* {
+  color: $light;
+}
+
+.main-content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  margin-bottom: $footerHeight;
+}

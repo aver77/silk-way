@@ -1,0 +1,38 @@
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/vars/fonts";
+@import "src/shared/styles/vars/colors.module.scss";
+@import "src/shared/styles/mixins/components";
+
+.container {
+  padding: calc(2 * $indentDefaultL) calc(4 * $indentDefaultXl);
+  text-align: center;
+
+  @media screen and (max-width: $ipadLg) {
+    padding: $indentDefaultXl calc(2 * $indentDefaultXl);
+  }
+
+  @media screen and (max-width: $ipad) {
+    padding: $indentDefaultL $indentDefaultXl;
+  }
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    padding: $indentDefaultMd $indentDefaultSm;
+  }
+}
+
+.title {
+  @include title;
+  font-size: $fsTextEXL;
+  padding-bottom: $indentDefaultMd;
+}
+
+.description {
+  font-size: $fsTextL;
+  padding-bottom: $indentDefaultMd;
+}
+
+.mobileNumber {
+  cursor: pointer;
+  font-size: $fsTextXXL;
+  color: lightyellow;
+}

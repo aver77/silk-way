@@ -1,0 +1,60 @@
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/vars/fonts";
+@import "src/shared/styles/vars/colors.module.scss";
+@import "src/shared/styles/mixins/components";
+
+.container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: $footerHeight;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 calc(2 * $indentDefaultXl);
+  gap: $indentDefaultMd;
+
+  @media screen and (max-width: $ipadLg) {
+    padding: 0 $indentDefaultXl;
+  }
+
+  @media screen and (max-width: $ipad) {
+    padding: 0 $indentDefaultMd;
+  }
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    padding: 0 $indentDefaultSm;
+  }
+}
+
+.policyText {
+  color: $lines
+}
+
+.rateContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: $indentDefaultSm
+}
+
+.rateImage {
+  min-width: 60px;
+  max-width: 60px;
+}
+
+.starsWrapper {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.stars {
+  width: 12px;
+}
+
+.mask {
+  @include mask;
+}

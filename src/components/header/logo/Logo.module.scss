@@ -1,0 +1,14 @@
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/vars/fonts";
+@import "src/shared/styles/vars/colors.module.scss";
+@import "src/shared/styles/mixins/components";
+
+.logoContainer {
+  min-width: fit-content;
+  @include title;
+
+  @media screen and (max-width: $ipad) {
+    flex-grow: 1;
+    font-size: $fsTextXL;
+  }
+}

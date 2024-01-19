@@ -1,0 +1,174 @@
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/mixins/components";
+@import "src/shared/styles/vars/fonts";
+@import "src/shared/styles/vars/colors.module.scss";
+
+.cartContainer {
+  position: fixed;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 40%;
+  filter: drop-shadow(0 0 6px #000);
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: $gray;
+  z-index: $zIndexCart;
+
+  @media screen and (max-width: $ipadLg) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: $ipad) {
+    width: 70%;
+  }
+
+  @media screen and (max-width: $ipadSm) {
+    width: 80%;
+  }
+}
+
+.cartSubContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $indentDefaultSm $indentDefaultMd;
+}
+
+.closeImg {
+  @include closeIcon;
+}
+
+.amountOfGoods {
+  font-size: $indentDefaultMd;
+}
+
+.extraSale {
+  border-top: 1px solid $lines;
+  border-bottom: 1px solid $lines;
+  background: $red;
+  padding: $indentDefaultSm;
+  font-size: $fsTextMd;
+  @include flexCenter;
+}
+
+.cartItemsWrapper {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.cartItem {
+  border-bottom: 1px solid $lines;
+  padding: $indentDefaultMd;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: $indentDefaultMd;
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    padding: $indentDefaultSm $indentLow;
+  }
+}
+
+.cartItemSection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: $indentDefaultMd;
+  font-size: $fsTextL;
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    gap: $indentDefaultSm;
+    font-size: $fsTextMd;
+  }
+}
+
+.itemImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.removeItemImg {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.itemTitle {
+  @include title;
+  font-size: $fsTextXL;
+
+  @media screen and (max-width: $ipadLg) {
+    font-size: $fsTextL;
+  }
+
+  @media screen and (max-width: $phones), (max-height: $phones) {
+    font-size: $fsTextMd;
+  }
+}
+
+.emptyCartWrapper {
+  height: 100%;
+  @include flexCenter;
+}
+
+.emptyCartSubWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $indentLow;
+}
+
+.freeDelivery {
+  font-size: $fsTextMd;
+}
+
+.freeDeliveryFrom {
+  color: $lines
+}
+
+.truckImg {
+  min-width: 120px;
+  max-width: 120px;
+}
+
+.orderWrapper {
+  padding: $indentDefaultMd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.orderInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: $indentDefaultMd 0;
+  border-bottom: 1px solid $lines;
+  font-size: $fsTextL;
+}
+
+.orderWrapperLink {
+  width: 100%;
+  margin-top: $indentDefaultMd;
+}
+
+.orderBtn {
+  width: 100%;
+}

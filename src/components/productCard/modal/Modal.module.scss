@@ -1,0 +1,52 @@
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/vars/colors.module";
+@import "src/shared/styles/mixins/components";
+
+$modalWidth: 800px;
+$imageDimensions: 350px;
+
+.container {
+  cursor: default;
+  max-width: $modalWidth;
+  width: 100%;
+  box-shadow: 0 5px 15px #0000001a;
+  border-radius: $brDefault;
+  height: fit-content;
+  background: $gray;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.imageWrapper {
+  padding: $indentDefaultMd;
+  @include flexCenter;
+}
+
+.image {
+  max-width: $imageDimensions;
+  min-width: $imageDimensions;
+  max-height: $imageDimensions;
+  min-height: $imageDimensions;
+  border-radius: 50%;
+}
+
+.infoSection {
+  padding: $indentDefaultMd;
+  display: flex;
+  flex-direction: column;
+  gap: $indentDefaultMd;
+}
+
+.title {
+  @include title;
+}
+
+.description {
+  flex-grow: 1;
+}
+
+.text {
+  font-size: $fsTextL;
+}

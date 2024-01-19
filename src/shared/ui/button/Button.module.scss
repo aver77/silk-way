@@ -1,0 +1,45 @@
+@import "src/shared/styles/vars/fonts";
+@import "src/shared/styles/vars/colors.module";
+@import "src/shared/styles/vars/dimensions.module";
+
+.button {
+  border-radius: 3px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.primary {
+  filter: drop-shadow(1px 1px 10px #000);
+  background: $green;
+}
+
+.secondary {
+  background: transparent;
+  padding: 0 !important;
+}
+
+.small {
+  font-size: $fsSmall;
+  padding: $indentDefaultXs $indentDefaultMd;
+}
+
+.medium {
+  font-size: $fsTextMd;
+  padding: $indentDefaultSm $indentDefaultL;
+}
+
+.large {
+  font-size: $fsTextXL;
+  padding: $indentDefaultSm $indentDefaultXl;
+}
+
+.disabled {
+  cursor: unset;
+  background: $lines;
+  color: rgba($light, 0.5);
+}

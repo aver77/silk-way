@@ -1,0 +1,17 @@
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/mixins/components";
+@import "src/shared/styles/vars/fonts";
+@import "src/shared/styles/vars/colors.module";
+
+.badge {
+  position: absolute;
+  right: -4px;
+  font-size: $fsESmall;
+  bottom: -4px;
+  border-radius: 14px;
+  background: $red;
+  height: 18px;
+  width: 18px;
+  min-width: 18px;
+  @include flexCenter;
+}

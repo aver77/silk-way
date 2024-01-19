@@ -1,0 +1,41 @@
+@import "src/shared/styles/vars/colors.module";
+@import "src/shared/styles/vars/dimensions.module";
+@import "src/shared/styles/vars/fonts";
+
+.input {
+  font-size: $fsTextMd;
+}
+
+.primary {
+  border-radius: $brDefault;
+  border: 1px solid $light;
+  &:focus {
+    border-width: 2px;
+  }
+}
+
+.secondary {
+  border: 1px solid $light;
+  &:focus {
+    border-bottom-width: 2px;
+  }
+}
+
+.small {
+  padding: $indentLow $indentDefaultSm;
+}
+
+.medium {
+  padding: $indentDefaultSm $indentDefaultMd;
+}
+
+.large {
+  padding: $indentDefaultMd $indentDefaultXl;
+}
+
+.disabled {
+  border-radius: $brDefault;
+  background: $lines;
+  border-color: $lines;
+}
+
