@@ -14,7 +14,7 @@
 }
 
 .primary {
-  filter: drop-shadow(1px 1px 10px #000);
+  filter: $blurredFilter;
   background: $green;
 }
 

@@ -1,9 +1,13 @@
+@import "./dimensions.module";
+
 $black: #000;
 $gray: #222222;
 $light: #ffffff;
 $red: #F24942;
 $green: #33BC44;
 $lines: rgba(#d7d9dd, 0.2);
+$defaultFilter: drop-shadow(0 0 $indentLow $black);
+$blurredFilter: drop-shadow(1px 1px 10px $black);
 
 :export {
   black: #{$black};

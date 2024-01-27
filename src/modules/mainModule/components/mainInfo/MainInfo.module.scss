@@ -36,6 +36,7 @@
   justify-content: center;
   padding-left: calc(4 * $indentDefaultXl);
   padding-right: $indentDefaultMd;
+  padding-top: calc($headerHeight / 2);
 
   @media screen and (max-width: $ipadLg) {
     padding-left: calc(2 * $indentDefaultXl);

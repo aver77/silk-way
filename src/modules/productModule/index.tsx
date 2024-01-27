@@ -8,7 +8,7 @@ import Input from "@/shared/ui/input";
 import Select from "@/shared/ui/select";
 import { ALL_PRODUCTS, checkIfStrIncludesStr } from "@/modules/productModule/defaultData";
 
-import styles from "./Product.module.scss";
+import styles from "./ProductModule.module.scss";
 
 interface IProductModule {
     type: ProductTypes;
