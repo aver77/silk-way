@@ -20,9 +20,10 @@ const MainInfo = () => {
                     Silk way & lounge Воронеж - место где время останавливается ,<br /> а самый
                     напряженный день становится размеренным.
                 </p>
-                <a {...telAttrs}>
-                    <Button> ЗАКАЗАТЬ</Button>
-                </a>
+                <Button className={styles.orderBtn}>
+                    ЗАКАЗАТЬ
+                    <a {...telAttrs} />
+                </Button>
             </div>
         </div>
     );

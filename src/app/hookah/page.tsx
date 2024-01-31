@@ -3,11 +3,18 @@ import dynamic from "next/dynamic";
 import { Metadata } from "next";
 
 import { ProductTypes } from "@/shared/data/enums";
+import { sharedOpenGraph } from "@/app/metaUtil";
 
 const ProductModule = dynamic(() => import("@/modules/productModule"));
 
 export const metadata: Metadata = {
-    description: "Страница с товарами - кальяны, табаки"
+    description: "Весь ассортимент кальянов, табаков, углей, плиток в аренду",
+    openGraph: {
+        ...sharedOpenGraph,
+        url: "https://silk-way.shop/hookah",
+        description: "Весь ассортимент кальянов, табаков, углей, плиток в аренду",
+        images: ["../../shared/assets/img/hookahImg.png"]
+    }
 };
 
 export default function Hookah() {
