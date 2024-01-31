@@ -26,7 +26,7 @@ export const allContacts: IAllContacts[] = [
         imgSrc: tgLogo
     },
     {
-        link: "tel:+7 (900) 962-47-41",
+        link: "tel:+7(900)962-47-41",
         name: "+7 (900) 962-47-41",
         imgSrc: phoneLogo
     }
