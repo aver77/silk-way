@@ -267,13 +267,13 @@ export const defaultHookah = [
     }
 ];
 
-export const getProducts = (productType: ProductTypes): IProduct[] => {
+export const getProducts = (productType: ProductTypes, range?: number): IProduct[] => {
     switch (productType) {
         case ProductTypes.TEA: {
-            return defaultTeas;
+            return range ? defaultTeas.slice(0, range) : defaultTeas;
         }
         case ProductTypes.HOOKAH: {
-            return defaultHookah;
+            return range ? defaultHookah.slice(0, range) : defaultHookah;
         }
         default: {
             return [];

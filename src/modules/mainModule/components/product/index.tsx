@@ -15,7 +15,7 @@ interface IProductComponent {
 }
 
 const Product: FC<IProductComponent> = ({ title, type }) => {
-    const products = getProducts(type);
+    const products = getProducts(type, 7);
 
     return (
         <div className={styles.container}>
