@@ -11,7 +11,12 @@ const MainInfo = () => {
     return (
         <div className={styles.container}>
             <div className={styles.imageWrapper}>
-                <Image className={styles.lanternsImg} src={lanterns} alt={"lanterns"} />
+                <Image
+                    className={styles.lanternsImg}
+                    src={lanterns}
+                    alt={"lanterns"}
+                    priority={true}
+                />
                 <div className={styles.mask} />
             </div>
             <div className={styles.infoSection}>
