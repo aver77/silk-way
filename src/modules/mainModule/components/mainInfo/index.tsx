@@ -4,7 +4,7 @@ import Image from "next/image";
 import telAttrs from "@/shared/constants/telAttrs";
 import { Button } from "@/shared/ui";
 
-import lanterns from "@/shared/assets/img/lanterns.png";
+import lanterns from "@/shared/assets/webp/lanterns-desktop.webp";
 import styles from "./MainInfo.module.scss";
 
 const MainInfo = () => {
@@ -16,6 +16,7 @@ const MainInfo = () => {
                     src={lanterns}
                     alt={"lanterns"}
                     priority={true}
+                    fetchPriority={"high"}
                 />
                 <div className={styles.mask} />
             </div>

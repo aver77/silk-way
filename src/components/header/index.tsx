@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 import Cart from "@/components/header/cart";
@@ -15,6 +15,9 @@ import styles from "./Header.module.scss";
 const Header = () => {
     const [headerStyle, setHeaderStyle] = useState("");
 
+    const headerStyleRef = useRef(headerStyle);
+    headerStyleRef.current = headerStyle;
+
     const pathname = usePathname();
     const isMainPage = pathname === "/";
 
@@ -27,7 +30,7 @@ const Header = () => {
                     setHeaderStyle(styles.headerFullBg);
                 } else if (scrollY > 0) {
                     setHeaderStyle(styles.headerAlphaBg);
-                } else if (headerStyle !== styles.headerTransparent) {
+                } else if (headerStyleRef.current !== styles.headerTransparent) {
                     setHeaderStyle(styles.headerTransparent);
                 }
             };
@@ -38,7 +41,7 @@ const Header = () => {
                 document.removeEventListener("scroll", scrollHandler);
             };
         }
-    }, [isMainPage, headerStyle]);
+    }, [isMainPage]);
 
     return (
         <header

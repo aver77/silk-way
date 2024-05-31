@@ -16,11 +16,18 @@ const Contacts = () => {
                     title={"yandex map"}
                     src="https://yandex.ru/map-widget/v1/?um=constructor%3A0b630e30c8acc64cbdd322c2e3330e7da43b6ab5e0f65b7fdb5cf2e831b96dac&amp;source=constructor"
                     className={styles.iframe}
+                    loading={"lazy"}
                 ></iframe>
             </div>
             <div className={styles.contactsSection}>
                 <div className={styles.contactsImgWrapper}>
-                    <Image className={styles.contactsImg} src={lanternsFooter} alt={"lanterns"} />
+                    <Image
+                        className={styles.contactsImg}
+                        src={lanternsFooter}
+                        alt={"lanterns"}
+                        loading={"lazy"}
+                        fetchPriority={"low"}
+                    />
                     <div className={styles.mask} />
                 </div>
                 <div className={styles.contactsInfo}>
@@ -33,6 +40,8 @@ const Contacts = () => {
                                         className={styles.contactImg}
                                         src={imgSrc}
                                         alt={"contact img"}
+                                        loading={"lazy"}
+                                        fetchPriority={"low"}
                                     />
                                     <span>{name}</span>
                                 </div>

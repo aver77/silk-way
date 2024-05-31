@@ -12,7 +12,7 @@ import styles from "./Card.module.scss";
 
 const Modal = dynamic(() => import("./modal"));
 
-type TCard = IProduct;
+type TCard = { lazyLoadProductImg?: boolean } & IProduct;
 const Card: FC<TCard> = (product) => {
     const { title, src, description } = product || {};
     const [modal, setModal] = useState<JSX.Element | null>(null);
@@ -26,6 +26,7 @@ const Card: FC<TCard> = (product) => {
                 className={styles.image}
                 src={src}
                 alt={"card image"}
+                loading={product.lazyLoadProductImg ? "lazy" : "eager"}
             />
             <p className={styles.title}>{title}</p>
             <p className={styles.desc}>{description}</p>

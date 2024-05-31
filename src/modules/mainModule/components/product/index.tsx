@@ -27,7 +27,13 @@ const Product: FC<IProductComponent> = ({ title, type }) => {
             </div>
             <div className={styles.productsWrapper}>
                 {products.map((product) => {
-                    return <Card key={product.title} {...product} />;
+                    return (
+                        <Card
+                            key={product.title}
+                            {...product}
+                            lazyLoadProductImg={type === ProductTypes.TEA}
+                        />
+                    );
                 })}
             </div>
         </div>

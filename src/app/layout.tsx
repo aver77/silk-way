@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 import { sharedOpenGraph } from "./metaUtil";
 import "./globalStyles.scss";
 
-const montserrat = Pangolin({ weight: "400", subsets: ["latin", "cyrillic"] });
+const font = Pangolin({ weight: "400", subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
     title: "Silk Way - доставка кальнов и китайского чая в Воронеже",
@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="ru">
             <link rel="shortcut icon" href="/favicon.svg" />
-            <body className={montserrat.className}>
+            <body className={font.className}>
                 <div className={"main-content"}>
                     <Header />
                     <main>{children}</main>

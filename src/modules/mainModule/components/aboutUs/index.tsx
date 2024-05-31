@@ -27,14 +27,26 @@ const AboutUs = () => {
                         target="_blank"
                         rel="noreferrer noopener"
                     >
-                        <Image className={styles.image} src={_2gisLogo} alt={"2gis"} />
+                        <Image
+                            className={styles.image}
+                            src={_2gisLogo}
+                            alt={"2gis"}
+                            loading={"lazy"}
+                            fetchPriority={"low"}
+                        />
                     </a>
                     <a
                         href="https://yandex.ru/maps/org/silk_way_tea_lounge/19904677575/?ll=39.218487%2C51.686830&z=17"
                         target="_blank"
                         rel="noreferrer noopener"
                     >
-                        <Image className={styles.image} src={yandexLogo} alt={"yandex"} />
+                        <Image
+                            className={styles.image}
+                            src={yandexLogo}
+                            alt={"yandex"}
+                            loading={"lazy"}
+                            fetchPriority={"low"}
+                        />
                     </a>
                 </div>
             </div>

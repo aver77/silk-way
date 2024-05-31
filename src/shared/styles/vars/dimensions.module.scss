@@ -32,4 +32,7 @@ $brDefault: 8px;
 :export {
   mainInfoSectionHeight: #{$mainInfoSectionHeight};
   headerHeight: #{$headerHeight};
+  ipad: #{$ipad};
+  ipadSm: #{$ipadSm};
+  phones: #{$phones}
 }

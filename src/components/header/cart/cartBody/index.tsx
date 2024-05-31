@@ -46,7 +46,13 @@ const CartBody: FC<ICartBody> = ({ closeCart }) => {
                     return (
                         <div className={styles.cartItem} key={title}>
                             <div className={styles.cartItemSection}>
-                                <Image className={styles.itemImage} src={src} alt={"item img"} />
+                                <Image
+                                    className={styles.itemImage}
+                                    src={src}
+                                    alt={"item img"}
+                                    fetchPriority={"low"}
+                                    loading={"lazy"}
+                                />
                                 <span className={styles.itemTitle}>{title}</span>
                             </div>
                             <div className={styles.cartItemSection}>
@@ -56,6 +62,8 @@ const CartBody: FC<ICartBody> = ({ closeCart }) => {
                                     className={styles.removeItemImg}
                                     src={trashImg}
                                     alt={"trash img"}
+                                    fetchPriority={"low"}
+                                    loading={"lazy"}
                                 />
                             </div>
                         </div>
